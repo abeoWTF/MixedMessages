@@ -187,7 +187,7 @@ function createInsult(adj, noun) {
             }
 
 
-            return `You ${adj} ${noun}, you ${this.secondAdj} ${this.secondNoun}!`
+            return `You ${this.adj} ${this.noun}, you ${this.secondAdj} ${this.secondNoun}!`
         }
     }
 }

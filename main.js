@@ -1,3 +1,5 @@
+
+// Adjectives-array
 let wordsAdjective = ['aggressive',
 'aloof',
 'arrogant',
@@ -97,6 +99,7 @@ let wordsAdjective = ['aggressive',
 'vulgar',
  'weak-willed'];
 
+ // Nouns-array
 let wordsNoun = ['area',
 'book',
 'business',
@@ -159,7 +162,6 @@ const getRandomAdj = ()=> {
 };
 
 // Returns a random noun from the noun-array
-
 const getRandomNoun = ()=> {
 
     let n = Math.floor(Math.random() * wordsNoun.length);
@@ -167,8 +169,7 @@ const getRandomNoun = ()=> {
 
 };
 
-
-
+// Insult-factory - actually creates it all.
 function createInsult(adj, noun) {
     return {
         adj,
@@ -178,13 +179,10 @@ function createInsult(adj, noun) {
         getFullInsult() {
 
             while(this.adj === this.secondAdj) {
-                console.log('entered adj')
                 this.secondAdj = getRandomAdj()             
             };
 
             while(this.noun === this.secondNoun){
-                console.log('entered noun')
-
                 this.secondNoun = getRandomNoun();
             }
 
